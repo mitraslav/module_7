@@ -1,0 +1,25 @@
+{% extends 'blogs/base.html' %}
+{% block title %}Блог{% endblock %}
+{% block content %}
+<h1>Блог</h1>
+{% for post in posts %}
+  <div class="card mb-3">
+    <div class="row g-0">
+      {% if post.preview %}
+        <div class="col-md-3">
+          <img src="{{ post.preview.url }}" class="img-fluid" alt="{{ post.title }}">
+        </div>
+      {% endif %}
+      <div class="col">
+        <div class="card-body">
+          <h5 class="card-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>
+          <p class="card-text">{{ post.content|truncatechars:200 }}</p>
+          <p class="card-text"><small class="text-muted">Просмотров: {{ post.views }}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% empty %}
+  <p>Нет статей.</p>
+{% endfor %}
+{% endblock %}

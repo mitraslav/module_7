@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}{% if form.instance.pk %}Редактировать{% else %}Новый продукт{% endif %}{% endblock %}
+{% block content %}
+  <h1>{% if form.instance.pk %}Редактировать{% else %}Новый продукт{% endif %}</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for field in form %}
+      <div class="mb-3">
+        <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% if field.help_text %}<div class="form-text">{{ field.help_text }}</div>{% endif %}
+        {% if field.errors %}<div class="invalid-feedback d-block">{{ field.errors|striptags }}</div>{% endif %}
+      </div>
+    {% endfor %}
+    <button class="btn btn-primary" type="submit">Сохранить</button>
+    <a class="btn btn-secondary" href="{% url 'catalog:product_list' %}">Отмена</a>
+  </form>
+{% endblock %}

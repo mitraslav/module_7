@@ -1,0 +1,18 @@
+{% extends 'blogs/base.html' %}
+{% block title %}{{ post.title }} — Блог{% endblock %}
+{% block content %}
+<article>
+  <h1>{{ post.title }}</h1>
+  <p class="text-muted">Опубликовано: {{ post.created_at }} | Просмотров: {{ post.views }}</p>
+  {% if post.preview %}
+    <img src="{{ post.preview.url }}" class="img-fluid mb-3" alt="{{ post.title }}">
+  {% endif %}
+  <div>{{ post.content|linebreaks }}</div>
+
+  <div class="mt-4">
+    <a class="btn btn-outline-secondary" href="{% url 'blogs:post_list' %}">&larr; Назад в блог</a>
+    <a class="btn btn-outline-primary" href="{% url 'blogs:post_edit' post.pk %}">Редактировать</a>
+    <a class="btn btn-outline-danger" href="{% url 'blogs:post_delete' post.pk %}">Удалить</a>
+  </div>
+</article>
+{% endblock %}

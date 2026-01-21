@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Главная — Магазин</title>
+
+  <!-- Локальный Bootstrap -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+  <style>
+    :root{--sidebar-w:240px}
+    body { min-height:100vh; }
+    .sidebar {
+      width: var(--sidebar-w);
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      background: #222;
+      color: #fff;
+      padding: 1rem;
+    }
+    .content {
+      margin-left: calc(var(--sidebar-w) + 30px);
+      padding: 3rem 4rem;
+    }
+    .brand { width:44px; height:44px; border-radius:8px;
+            background:#fff; color:#222; display:flex; align-items:center; justify-content:center; font-weight:700; }
+    nav .nav-link.active { background:#1f6feb; color:#fff; border-radius:0.5rem; }
+    .page-title { text-align:center; font-size:2.75rem; font-weight:600; margin-bottom:0.25rem; }
+    .page-sub { text-align:center; color:#6c757d; margin-bottom:2rem; }
+    .price { font-size:2rem; font-weight:700; margin:0.6rem 0; }
+    .card-pricing { border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,.06); }
+    .profile-bottom { position:absolute; bottom:1rem; left:1rem; right:1rem; }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar d-flex flex-column">
+    <div class="d-flex align-items-center mb-3">
+      <div class="brand me-2">B</div>
+      <div><div class="fs-5 fw-semibold">Меню</div></div>
+    </div>
+
+    <nav class="nav flex-column mb-3">
+      <a href="index.html" class="nav-link active mb-2">Главная</a>
+      <a href="category.html" class="nav-link mb-2">Категории</a>
+      <a href="catalog.html" class="nav-link mb-2">Заказы</a>
+      <a href="contacts.html" class="nav-link mb-2">Контакты</a>
+    </nav>
+
+    <div class="mt-auto profile-bottom">
+      <div class="card bg-dark text-light p-2">
+        <div class="d-flex align-items-center">
+          <img src="/static/img/user-placeholder.png" alt="user" class="rounded-circle me-2" width="36" height="36">
+          <div class="small">Пользователь</div>
+        </div>
+        <div class="mt-2 d-grid gap-2">
+          <button class="btn btn-sm btn-secondary">Профиль</button>
+          <button class="btn btn-sm btn-outline-light">Выход</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <h1 class="page-title">Главная</h1>
+    <p class="page-sub">Вы находитесь на сайте, предназначенном для продажи товаров.</p>
+
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="card card-pricing text-center p-3">
+            <div class="card-header bg-transparent border-bottom-0">
+              <h5 class="mb-0">Товар 1</h5>
+            </div>
+            <div class="card-body">
+              <div class="price">$ 100</div>
+              <p class="text-muted small">10 users included, 2 GB of storage, Email support, Help center access</p>
+              <a href="#" class="btn btn-outline-primary w-75">Купить</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-pricing text-center p-3">
+            <div class="card-header bg-transparent border-bottom-0">
+              <h5 class="mb-0">Товар 1</h5>
+            </div>
+            <div class="card-body">
+              <div class="price">$ 100</div>
+              <p class="text-muted small">10 users included, 2 GB of storage, Email support, Help center access</p>
+              <a href="#" class="btn btn-outline-primary w-75">Купить</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-pricing text-center p-3">
+            <div class="card-header bg-transparent border-bottom-0">
+              <h5 class="mb-0">Товар 1</h5>
+            </div>
+            <div class="card-body">
+              <div class="price">$ 100</div>
+              <p class="text-muted small">10 users included, 2 GB of storage, Email support, Help center access</p>
+              <a href="#" class="btn btn-outline-primary w-75">Купить</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>

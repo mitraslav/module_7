@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Каталог — Магазин</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+  <style>
+    :root{--sidebar-w:240px}
+    .sidebar { width:var(--sidebar-w); position:fixed; top:0; left:0; bottom:0; background:#222; color:#fff; padding:1rem; }
+    .content { margin-left: calc(var(--sidebar-w) + 30px); padding:3rem 4rem; }
+    .brand { width:44px; height:44px; border-radius:8px; background:#fff; color:#222; display:flex; align-items:center; justify-content:center; font-weight:700; }
+    nav .nav-link.active { background:#1f6feb; color:#fff; border-radius:0.5rem; }
+    .thumb { background:#6c6c6c; color:#fff; height:220px; display:flex; align-items:center; justify-content:center; font-weight:600; }
+    .card-large { box-shadow:0 6px 18px rgba(0,0,0,.06); border-radius:6px; overflow:hidden; }
+    .page-title { text-align:center; font-size:2.75rem; margin-bottom:2rem; }
+  </style>
+</head>
+<body>
+  <aside class="sidebar d-flex flex-column">
+    <div class="d-flex align-items-center mb-3">
+      <div class="brand me-2">B</div>
+      <div><div class="fs-5 fw-semibold">Меню</div></div>
+    </div>
+
+    <nav class="nav flex-column mb-3">
+      <a class="nav-link" href="index.html">Главная</a>
+      <a class="nav-link" href="category.html">Категории</a>
+      <a class="nav-link active" href="catalog.html">Заказы</a>
+      <a class="nav-link" href="contacts.html">Контакты</a>
+    </nav>
+
+    <div class="mt-auto small text-light">Пользователь</div>
+  </aside>
+
+  <main class="content">
+    <h1 class="page-title">Каталог</h1>
+
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card card-large">
+            <div class="thumb">Thumbnail</div>
+            <div class="card-body">
+              <p class="mb-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <button class="btn btn-sm btn-outline-secondary me-2">View</button>
+                  <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card card-large">
+            <div class="thumb">Thumbnail</div>
+            <div class="card-body">
+              <p class="mb-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <button class="btn btn-sm btn-outline-secondary me-2">View</button>
+                  <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Второй ряд -->
+        <div class="col-md-6">
+          <div class="card card-large">
+            <div class="thumb">Thumbnail</div>
+            <div class="card-body">
+              <p class="mb-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <button class="btn btn-sm btn-outline-secondary me-2">View</button>
+                  <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card card-large">
+            <div class="thumb">Thumbnail</div>
+            <div class="card-body">
+              <p class="mb-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <button class="btn btn-sm btn-outline-secondary me-2">View</button>
+                  <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>

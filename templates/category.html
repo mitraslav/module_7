@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Категория 1 — Магазин</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+  <style>
+    :root{--sidebar-w:240px}
+    .sidebar { width:var(--sidebar-w); position:fixed; top:0; left:0; bottom:0; background:#222; color:#fff; padding:1rem; }
+    .content { margin-left: calc(var(--sidebar-w) + 30px); padding:3rem 4rem; }
+    .brand { width:44px; height:44px; border-radius:8px; background:#fff; color:#222; display:flex; align-items:center; justify-content:center; font-weight:700; }
+    .page-title { text-align:center; font-size:2.75rem; margin-bottom:2rem; }
+    .card-product { border-radius:8px; box-shadow:0 6px 14px rgba(0,0,0,.05); }
+    nav .nav-link.active { background:#1f6feb; color:#fff; border-radius:0.5rem; }
+    .price { font-size:1.75rem; font-weight:700; }
+  </style>
+</head>
+<body>
+  <aside class="sidebar d-flex flex-column">
+    <div class="d-flex align-items-center mb-3">
+      <div class="brand me-2">B</div>
+      <div><div class="fs-5 fw-semibold">Меню</div></div>
+    </div>
+
+    <nav class="nav flex-column mb-3">
+      <a href="index.html" class="nav-link active mb-2">Главная</a>
+      <a href="category.html" class="nav-link mb-2">Категории</a>
+      <a href="catalog.html" class="nav-link mb-2">Заказы</a>
+      <a href="contacts.html" class="nav-link mb-2">Контакты</a>
+    </nav>
+
+    <div class="mt-auto small text-light">Пользователь</div>
+  </aside>
+
+  <main class="content">
+    <h1 class="page-title">Категория 1</h1>
+
+    <div class="container">
+      <div class="row g-4">
+        <!-- 6 товаров (3x2) -->
+        <div class="col-md-4">
+          <div class="card card-product">
+            <div class="card-header text-center bg-light border-bottom-0">
+              <strong>Товар 1</strong>
+            </div>
+            <div class="card-body text-center">
+              <div class="price">$ 100</div>
+              <p class="small text-muted">10 users included, 2 GB of storage, Email support, Help center access</p>
+              <a class="btn btn-outline-primary">Купить</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-product">
+            <div class="card-header text-center bg-light border-bottom-0">
+              <strong>Товар 1</strong>
+            </div>
+            <div class="card-body text-center">
+              <div class="price">$ 100</div>
+              <p class="small text-muted">10 users included, 2 GB of storage, Email support, Help center access</p>
+              <a class="btn btn-outline-primary">Купить</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-product">
+            <div class="card-header text-center bg-light border-bottom-0">
+              <strong>Товар 1</strong>
+            </div>
+            <div class="card-body text-center">
+              <div class="price">$ 100</div>
+              <p class="small text-muted">10 users included, 2 GB of storage, Email support, Help center access</p>
+              <a class="btn btn-outline-primary">Купить</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- вторая строка -->
+        <div class="col-md-4">
+          <div class="card card-product">
+            <div class="card-header text-center bg-light border-bottom-0">
+              <strong>Товар 1</strong>
+            </div>
+            <div class="card-body text-center">
+              <div class="price">$ 100</div>
+              <p class="small text-muted">10 users included, 2 GB of storage, Email support, Help center access</p>
+              <a class="btn btn-outline-primary">Купить</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-product">
+            <div class="card-header text-center bg-light border-bottom-0">
+              <strong>Товар 1</strong>
+            </div>
+            <div class="card-body text-center">
+              <div class="price">$ 100</div>
+              <p class="small text-muted">10 users included, 2 GB of storage, Email support, Help center access</p>
+              <a class="btn btn-outline-primary">Купить</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-product">
+            <div class="card-header text-center bg-light border-bottom-0">
+              <strong>Товар 1</strong>
+            </div>
+            <div class="card-body text-center">
+              <div class="price">$ 100</div>
+              <p class="small text-muted">10 users included, 2 GB of storage, Email support, Help center access</p>
+              <a class="btn btn-outline-primary">Купить</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>
